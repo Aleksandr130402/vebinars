@@ -1,15 +1,14 @@
+import ContentItemBottom from '../ContentItemBottom';
 import './content-item.scss';
 
-const ContentItem = ({data}) => {
+const ContentItem = ({data, onClicked}) => {
+
     return (
-        data.map((item) => {
+        data.map(({id, title, time, date, overload}, idx) => {
             return (
-                <div key={item.id} className="content-item">
-                    <a onClick={() => console.log("click")} className="content-item-body"><p>{item.title}</p></a>
-                    <div className="content-item-bottom">
-                        <span>{item.time}</span>
-                        <span>{item.date}</span>
-                    </div>
+                <div key={idx} className="content-item">
+                    <a className="content-item-top" onClick={() => onClicked(id)}>{title}</a>
+                    <ContentItemBottom time={time} date={date}/>
                 </div>
             )
         })  

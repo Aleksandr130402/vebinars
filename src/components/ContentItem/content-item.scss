@@ -1,5 +1,4 @@
-@import 'src/styles/vars.scss';
-@import 'src/styles/fonts.scss';
+@import 'src/assets/styles/vars.scss';
 
 .content-item {
 	padding: $twentyPx;
@@ -14,19 +13,11 @@
 		margin-bottom: 0;
 	}
 }
-.content-item-body {
+
+.content-item-top {
 	margin-bottom: $twentyPx;
-
-	p {
-		margin: 0;
-		color: $с-black;
-	}
-}
-.content-item-bottom {
-	display: flex;
-	justify-content: space-between;
-
-	span {
-		color: $с-grey;
-	}
+	margin: 0;
+	color: $с-black;
+	font-family: $f-main;
+	font-weight: bold;
 }

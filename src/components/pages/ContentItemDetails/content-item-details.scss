@@ -1,0 +1,43 @@
+@import 'src/assets/styles/vars.scss';
+
+.content-item-top {
+    margin-bottom: $eightPx;
+}
+
+.content-video {
+    margin-bottom: $eightPx;
+}
+
+.content-details {
+    margin-top: 0;
+    margin-bottom: 17px;
+}
+
+.material {
+    margin-bottom: 16px;
+
+    button {    
+        margin-bottom: $fivePx;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.material-header {
+    margin-top: 0;
+    margin-bottom: $eightPx;
+    color: $с-black;
+}
+
+.material-button {
+    color: $c-yellow;
+    border: 1px solid $c-yellow;
+    border-radius: $fivePx;
+    padding: $fivePx;
+
+    img {
+        margin-right: $fivePx;
+    }
+}

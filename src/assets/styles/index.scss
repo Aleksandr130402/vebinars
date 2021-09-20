@@ -1,0 +1,16 @@
+@import './fonts';
+@import './vars';
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: $f-main;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+}
