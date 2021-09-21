@@ -1,4 +1,4 @@
-import './content-item-bottom.scss';
+import './ContentItemBottom.scss';
 
 const ContentItemBottom = ({time, date}) => {
     return (

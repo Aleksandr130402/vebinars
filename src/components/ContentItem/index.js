@@ -1,5 +1,5 @@
 import ContentItemBottom from '../ContentItemBottom';
-import './content-item.scss';
+import './ContentItem.scss';
 
 const ContentItem = ({data, onClicked}) => {
 

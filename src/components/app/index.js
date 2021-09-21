@@ -1,4 +1,4 @@
-import './app.scss';
+import './App.scss';
 import ContentItem from '../ContentItem';
 import ContentItemDetails from '../pages/ContentItemDetails';
 import Header from '../Header';

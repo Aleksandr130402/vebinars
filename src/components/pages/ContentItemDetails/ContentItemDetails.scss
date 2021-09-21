@@ -1,14 +1,14 @@
 @import 'src/assets/styles/vars.scss';
 
 .content-item-top {
-    margin-bottom: $eightPx;
+    margin-bottom: 8px;
 }
 
-.content-video {
-    margin-bottom: $eightPx;
+.video {
+    margin-bottom: 8px;
 }
 
-.content-details {
+.details {
     margin-top: 0;
     margin-bottom: 17px;
 }
@@ -17,7 +17,9 @@
     margin-bottom: 16px;
 
     button {    
-        margin-bottom: $fivePx;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
 
         &:last-child {
             margin-bottom: 0;
@@ -27,17 +29,19 @@
 
 .material-header {
     margin-top: 0;
-    margin-bottom: $eightPx;
+    margin-bottom: 8px;
+    font-size: 16px;
     color: $с-black;
 }
 
 .material-button {
     color: $c-yellow;
     border: 1px solid $c-yellow;
-    border-radius: $fivePx;
-    padding: $fivePx;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: $bg-white;
 
     img {
-        margin-right: $fivePx;
+        margin-right: 10px;
     }
 }

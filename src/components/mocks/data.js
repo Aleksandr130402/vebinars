@@ -1,3 +1,5 @@
+import videos from '../../assets/videos/025.webm';
+
 const data = [
     {
       id: 1,
@@ -5,7 +7,7 @@ const data = [
       time: "Тривалість: 01:08:15",
       date: "09.03.21",
       overload: {
-        video: "src/assets/images/e3b.jpg",
+        video: videos,
         details: 'Вебінар призначений для заступників керуючих, які відповідальні за навчання у магазинах та для керуючих.',
         materials: ['Документ для аудитории.doc', 'Схема развития.png']
       } 
@@ -16,7 +18,7 @@ const data = [
       time: "Тривалість: 01:08:15",
       date: "09.03.21",
       overload: {
-        video: "src/assets/images/video.png",
+        video: videos,
         details: 'Вебінар призначений для заступників керуючих, які відповідальні за навчання у магазинах та для керуючих.',
         materials: ['Документ для аудитории.doc', 'Схема развития.png']
       }
@@ -27,7 +29,7 @@ const data = [
       time: "Тривалість: 01:08:15",
       date: "09.03.21",
       overload: {
-        video: "src/assets/images/video.png",
+        video: videos,
         details: 'Вебінар призначений для заступників керуючих, які відповідальні за навчання у магазинах та для керуючих.',
         materials: ['Документ для аудитории.doc', 'Схема развития.png']
       }
@@ -38,7 +40,7 @@ const data = [
       time: "Тривалість: 01:08:15",
       date: "09.03.21",
       overload: {
-        video: "src/assets/images/video.png",
+        video: videos,
         details: 'Вебінар призначений для заступників керуючих, які відповідальні за навчання у магазинах та для керуючих.',
         materials: ['Документ для аудитории.doc', 'Схема развития.png']
       }
