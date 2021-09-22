@@ -6,6 +6,8 @@
 
 .video {
     margin-bottom: 8px;
+    width: 100%;
+    border-radius: 5px;
 }
 
 .details {
@@ -16,13 +18,17 @@
 .material {
     margin-bottom: 16px;
 
-    button {    
+    a {    
         margin-bottom: 8px;
-        display: flex;
+        display: inline-flex;
         align-items: center;
+        text-decoration: none;
 
         &:last-child {
             margin-bottom: 0;
+        }
+        &:hover {
+            text-decoration: underline;
         }
     }
 }
@@ -34,7 +40,7 @@
     color: $с-black;
 }
 
-.material-button {
+.material-link {
     color: $c-yellow;
     border: 1px solid $c-yellow;
     border-radius: 5px;

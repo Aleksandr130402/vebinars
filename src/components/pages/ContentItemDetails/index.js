@@ -1,29 +1,29 @@
 import ContentItemBottom from '../../ContentItemBottom';
-import buttonIcon from '../../../assets/images/description.png';
+import buttonIcon from '../../../assets/images/description.svg';
 import videoPoster from '../../../assets/images/video.png';
 
 import './ContentItemDetails.scss';
 
 const ContentItemDetails = ({selectedItem}) => {
+
     const {time, date, title, overload} = selectedItem;
+    
     return (
-        <div className="content-item">
-            <p className="content-item-top">{title}</p>
-            <video className="video" poster={videoPoster}>
-                <source src={overload.video}></source>
-            </video>
+        <article className="content-item">
+            <h2 className="content-item-top">{title}</h2>
+            <video className="video" src={overload.video} controls poster={videoPoster}/>
             <p className="details">{overload.details}</p>
             <div className="material">
-                <h2 className="material-header">Додаткові матеріали:</h2>
+                <h3 className="material-header">Додаткові матеріали:</h3>
                 {overload.materials.map((name, idx) => {
                     return (
-                        <button key={idx} className="material-button"><img src={buttonIcon}/>{name}</button>
+                        <a href="#" key={idx} className="material-link"><img src={buttonIcon} alt="icon"/>{name}</a>
                     )
                 })}
             </div>
             
             <ContentItemBottom time={time} date={date}/>
-        </div>  
+        </article>  
     )
 }
 

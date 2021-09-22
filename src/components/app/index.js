@@ -1,13 +1,18 @@
 import './App.scss';
+
+import { useState } from 'react';
+import { Route, Switch } from 'react-router';
+
 import ContentItem from '../ContentItem';
 import ContentItemDetails from '../pages/ContentItemDetails';
 import Header from '../Header';
+
 import data from '../mocks/data';
-import { Route, Switch } from 'react-router';
-import { useState } from 'react';
+import PopUp from '../PopUp';
 
 function App() {
   const [selectedItem, addSelectedItem] = useState({});
+  const [notif, addNotif] = useState(false);
 
   function selectItem(id) {
     const item = data.find((item) => item.id === id);
@@ -16,9 +21,16 @@ function App() {
     addSelectedItem(item);
   }
 
+  let popUp;
+
+  if (notif) {
+    popUp = <PopUp onClosed={() => addNotif(false)}/>
+  } 
+
   return (
-    <div className="app">
-      <Header/>
+    <article className="app">
+      <Header onNotif={() => addNotif(true)}/>
+      {popUp}
       <div className="container">
         <Switch>
           <Route
@@ -45,7 +57,7 @@ function App() {
           />
         </Switch>
       </div>  
-    </div>
+    </article>
   );
 }
 

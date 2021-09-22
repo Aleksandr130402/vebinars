@@ -13,4 +13,7 @@ body {
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
+  background: $bg-grey;
+  display: flex;
+  flex-direction: column;
 }
