@@ -1,10 +1,10 @@
-@import 'src/assets/styles/vars.scss';
+@import '../../assets/styles/vars.scss';
 
 .content-item-bottom {
 	display: flex;
 	justify-content: space-between;
 
 	span {
-		color: $с-grey;
+		color: $grey;
 	}
 }

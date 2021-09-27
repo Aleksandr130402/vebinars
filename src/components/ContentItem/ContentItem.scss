@@ -1,4 +1,4 @@
-@import 'src/assets/styles/vars.scss';
+@import '../../assets/styles/vars.scss';
 
 .content-item {
 	padding: 16px;
@@ -15,7 +15,7 @@
 
 .content-item-top {
 	display: block;
-	color: $с-black;
+	color: $black;
 	font-weight: bold;
 	font-size: 16px;
 }

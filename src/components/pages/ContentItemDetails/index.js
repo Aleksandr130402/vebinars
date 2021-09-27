@@ -17,7 +17,7 @@ const ContentItemDetails = ({selectedItem}) => {
                 <h3 className="material-header">Додаткові матеріали:</h3>
                 {overload.materials.map((name, idx) => {
                     return (
-                        <a href="#" key={idx} className="material-link"><img src={buttonIcon} alt="icon"/>{name}</a>
+                        <a href="/" key={idx} className="material-link"><img src={buttonIcon} alt="icon"/>{name}</a>
                     )
                 })}
             </div>

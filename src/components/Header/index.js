@@ -2,11 +2,11 @@ import './Header.scss';
 import notifIcon from '../../assets/images/notif.svg';
 import menuIcon from '../../assets/images/menu.svg';
 
-const Header = ({onNotif}) => {
+const Header = ({onNotif, onMenu}) => {
     return (
-        <header>
-            <img className="menu" src={menuIcon} alt="menu.svg"/>
-            <img onClick={onNotif} className="notif" src={notifIcon} alt="notif.svg"/>
+        <header className="header">
+            <img onClick={onMenu} className="menu-icon" src={menuIcon} alt="menu.svg"/>
+            <img onClick={onNotif} className="notif-icon" src={notifIcon} alt="notif.svg"/>
             <h2>Вебінари</h2>
         </header>    
     )

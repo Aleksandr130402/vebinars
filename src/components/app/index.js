@@ -9,29 +9,31 @@ import Header from '../Header';
 
 import data from '../mocks/data';
 import PopUp from '../PopUp';
+import Menu from '../Menu';
 
-function App() {
+const App = () => {
+
   const [selectedItem, addSelectedItem] = useState({});
   const [notif, addNotif] = useState(false);
+  const [menu, addMenu] = useState(false);
 
-  function selectItem(id) {
+  const selectItem = (id) => {
     const item = data.find((item) => item.id === id);
 
     console.log(item);
     addSelectedItem(item);
   }
 
-  let popUp;
-
-  if (notif) {
-    popUp = <PopUp onClosed={() => addNotif(false)}/>
-  } 
-
   return (
-    <article className="app">
-      <Header onNotif={() => addNotif(true)}/>
-      {popUp}
-      <div className="container">
+    <main className="app">
+      <Header 
+        onNotif={() => addNotif(true)} 
+        onMenu={() => addMenu(true)}
+      />
+      {notif && <PopUp onClosed={() => addNotif(false)}/>}
+      {menu && <Menu onClosed={() => addMenu(false)}/>}
+      
+      <article className="container">
         <Switch>
           <Route
             path="/"
@@ -56,8 +58,8 @@ function App() {
             }} 
           />
         </Switch>
-      </div>  
-    </article>
+      </article>  
+    </main>
   );
 }
 
