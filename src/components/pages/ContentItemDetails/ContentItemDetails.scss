@@ -1,53 +1,49 @@
 @import '../../../assets/styles/vars.scss';
 
-.content-item-top {
-    margin-bottom: 8px;
-}
-
 .video {
-    margin-bottom: 8px;
-    width: 100%;
-    border-radius: 5px;
+	margin-bottom: 8px;
+	width: 100%;
+	border-radius: 5px;
 }
 
 .details {
-    margin-top: 0;
-    margin-bottom: 17px;
+	margin-top: 0;
+	margin-bottom: 17px;
 }
 
 .material {
-    margin-bottom: 16px;
+	margin-bottom: 16px;
 
-    a {    
-        margin-bottom: 8px;
-        display: inline-flex;
-        align-items: center;
-        text-decoration: none;
+	a {
+		margin-bottom: 8px;
+		display: inline-flex;
+		align-items: center;
+		text-decoration: none;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 .material-header {
-    margin-top: 0;
-    margin-bottom: 8px;
-    font-size: 16px;
-    color: $black;
+	margin-top: 0;
+	margin-bottom: 8px;
+	font-size: 16px;
+	color: $c-black;
 }
 
 .material-link {
-    color: $yellow;
-    border: 1px solid $yellow;
-    border-radius: 5px;
-    padding: 8px;
-    background-color: $bg-white;
+	color: $c-yellow;
+	border: 1px solid $c-yellow;
+	border-radius: 5px;
+	padding: 8px;
+	background-color: $bg-white;
 
-    img {
-        margin-right: 10px;
-    }
+	img {
+		margin-right: 10px;
+	}
 }

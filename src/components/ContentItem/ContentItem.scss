@@ -2,11 +2,16 @@
 
 .content-item {
 	padding: 16px;
-	background: #ffffff;
-	border: 1px solid #eeeeee;
-	box-shadow: $boxShadow;
+	background: $bg-white;
+	border: $border-item;
+	box-shadow: $box-shadow;
 	border-radius: 10px;
 	margin-bottom: 10px;
+
+	h2 {
+		color: $c-black;
+		font-size: 16px;
+	}
 
 	&:last-child {
 		margin-bottom: 0;
@@ -15,7 +20,9 @@
 
 .content-item-top {
 	display: block;
-	color: $black;
+	color: $c-black;
 	font-weight: bold;
 	font-size: 16px;
+	margin-top: 0;
+	margin-bottom: 8px;
 }

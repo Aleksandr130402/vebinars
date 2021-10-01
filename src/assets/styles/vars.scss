@@ -1,12 +1,18 @@
 $f-main: 'MyriadPro';
 
-$orange: #F9C949;
-$yellow: #FAB600;
-$black: #404040;
-$grey: #828282;
-$border-grey: 1px solid #E7E7E7;
+$c-orange: #f9c949;
+$c-yellow: #fab600;
+$c-black: #404040;
+$c-grey: #828282;
+$border-silver: 1px solid #e7e7e7;
+$border-grey: 1px solid #bdbdbd;
+$border-item: 1px solid #eeeeee;
 $bg-white: #fff;
-$bg-grey: #F5F5F5;
-
-$boxShadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+$bg-grey: #f5f5f5;
 $bg-dark: rgba(0, 0, 0, 0.5);
+
+$box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+$lg: 992px;
+$md: 768px;
+$sm: 576px;

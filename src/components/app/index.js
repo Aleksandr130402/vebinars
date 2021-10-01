@@ -5,11 +5,13 @@ import { Route, Switch } from 'react-router';
 
 import ContentItem from '../ContentItem';
 import ContentItemDetails from '../pages/ContentItemDetails';
+import News from '../pages/News';
 import Header from '../Header';
-
-import data from '../mocks/data';
 import PopUp from '../PopUp';
 import Menu from '../Menu';
+
+import data from '../mocks/data';
+
 
 const App = () => {
 
@@ -31,9 +33,9 @@ const App = () => {
         onMenu={() => addMenu(true)}
       />
       {notif && <PopUp onClosed={() => addNotif(false)}/>}
-      {menu && <Menu onClosed={() => addMenu(false)}/>}
+      <Menu menu={menu} onClosed={() => addMenu(false)}/>
       
-      <article className="container">
+      <section className="container">
         <Switch>
           <Route
             path="/"
@@ -57,8 +59,16 @@ const App = () => {
                 )
             }} 
           />
+          <Route
+            path="/news"
+            render={() => {
+              return (
+                <News/>
+              )
+            }}
+          />
         </Switch>
-      </article>  
+      </section>  
     </main>
   );
 }

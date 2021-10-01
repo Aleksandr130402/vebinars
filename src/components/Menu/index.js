@@ -4,43 +4,49 @@ import './Menu.scss';
 import avatar from '../../assets/images/avatar.png';
 import closeIcon from '../../assets/images/close.svg';
 import arrowIcon from '../../assets/images/arrow.svg'
+import { Link } from 'react-router-dom';
 
-const Menu = ({onClosed}) => {
+const Menu = ({onClosed, menu}) => {
     const [openList, addOpenList] = useState(false);
 
+    function closeMenu(e) {
+        if(e.target.tagName === "A")
+            onClosed();
+    }
+
     return (
-        <div className="menu">
-            <div className="menu-content">
-            <img className="close-menu" onClick={onClosed} src={closeIcon} alt="close"/>
-                <header>
+        <div className={`menu ${menu ? "active" : ""}`}>
+            <nav onClick={(e) => closeMenu(e)}>
+                <button type="button" className="close-menu" onClick={onClosed}>
+                    <img src={closeIcon} alt="close"/>
+                </button>
+                <div className="top">
                     <img id="avatar" src={avatar} alt="avatar"/>
-                    <div className="user">
+                    <div className="user-info">
                         <span className="initials">Юлий Фомин</span>
                         <span className="position">Продакт менеджер</span>
                     </div>
-                </header>
-                <hr/>
+                </div>
                 <ul className="list-items">
-                    <li>Головна сторінка</li>
-                    <li className={`with-arrow ${openList ? "bg-grey" : ""}`} onClick={() => addOpenList(!openList)}>
+                    <li><Link to="/">Головна сторінка</Link></li>
+                    <li className={`with-arrow ${openList ? "show" : ""}`} onClick={() => addOpenList(!openList)}>
                         Побажання
-                        <img className={`arrow-icon ${openList ? "active" : ""}`} src={arrowIcon} alt="arrow"/>
-                        <ul className={`list-extra ${openList ? "show" : ""}`}>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
+                        <img className={`arrow-icon`} src={arrowIcon} alt="arrow"/>
+                        <ul className={`list-extra`}>
+                            <li><Link to="/">1</Link></li>
+                            <li><Link to="/">2</Link></li>
+                            <li><Link to="/">3</Link></li>
                         </ul>
                     </li>
-                    <li>Новини</li>
-                    <li>Доступність</li>
-                    <li>Дні народження</li>
-                </ul>
-                <hr/>
+                    <li><Link to="/news">Новини</Link></li>
+                    <li><Link to="/">Доступність</Link></li>
+                    <li><Link to="/">Дні народження</Link></li>
+                </ul> 
                 <ul className="support">
-                    <li>Підтримка</li>
-                    <li>Налаштування</li>
+                    <li><a href="/">Підтримка</a></li>
+                    <li><a href="/">Налаштування</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     )
 }
