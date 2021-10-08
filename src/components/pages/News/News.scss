@@ -22,6 +22,10 @@
 	box-shadow: $box-shadow;
 	border-radius: 10px;
 	margin-bottom: 10px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .news-info {

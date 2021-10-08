@@ -7,8 +7,8 @@ import chatBubbleIcon from '../../../assets/images/chat_bubble.svg';
 
 const News = ({data, onClicked}) => {
 
-	const [ likes ] = useState(8700);
-	const [ comments ] = useState(9700);
+	const [ countLikes ] = useState(8700);
+	const [ countComments ] = useState(9700);
 
 	return (
 		data.map(({id, title, image, time}, idx) => {
@@ -19,8 +19,8 @@ const News = ({data, onClicked}) => {
 						<h2>{title}</h2>
 						<div className="content-item-bottom">
 							<span>{time}</span>
-							<span><img src={favoriteIcon} alt="favorite"/>{likes}</span>
-							<span><img src={chatBubbleIcon} alt="chat-bubble"/>{comments}</span>
+							<span><img src={favoriteIcon} alt="favorite"/>{countLikes}</span>
+							<span><img src={chatBubbleIcon} alt="chat-bubble"/>{countComments}</span>
 						</div>
 					</div>
 				</article>
