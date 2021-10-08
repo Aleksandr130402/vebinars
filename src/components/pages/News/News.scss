@@ -1,9 +1,35 @@
-.content-item-bottom span {
-	display: flex;
-	align-items: center;
+@import '../../../assets/styles/vars.scss';
+
+.content-item-bottom {
+	span {
+		display: flex;
+		align-items: center;
+	}
+
+	img {
+		margin-right: 10px;
+	}
 }
 
 .news-image {
 	height: auto;
 	width: 100%;
+}
+
+.news {
+	background: $bg-white;
+	border: $border-item;
+	box-shadow: $box-shadow;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.news-info {
+	padding: 16px;
+	margin-bottom: 10px;
+
+	h2 {
+		color: $c-black;
+		font-size: 16px;
+	}
 }

@@ -1,6 +1,6 @@
 import videos from '../../assets/videos/025.webm';
 
-const data = [
+const vebinars = [
     {
       id: 1,
       title: `02.03.21 Новий функціонал модулю навчання у FZ client`,
@@ -47,4 +47,4 @@ const data = [
     }
 ] 
 
-export default data;
+export default vebinars;

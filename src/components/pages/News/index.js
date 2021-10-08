@@ -1,35 +1,31 @@
+import { useState } from 'react';
+
 import "./News.scss";
 
-import newsImage from "../../../assets/images/img_news.png";
 import favoriteIcon from '../../../assets/images/favorite.svg';
 import chatBubbleIcon from '../../../assets/images/chat_bubble.svg';
 
-const News = () => {
+const News = ({data, onClicked}) => {
+
+	const [ likes ] = useState(8700);
+	const [ comments ] = useState(9700);
+
 	return (
-		<article className="content-item">
-			<h2>3 липня 11:00 Лекція-презентація: 
-				«Сортування для «чайників», 
-				або Як почати сортувати сміття вдома».
-			</h2>
-			<img className="news-image" src={newsImage} alt="news"/>
-			<p>
-				Pub Quiz – це командна інтелектуальна гра, 
-				яку вигадали у Великобританії, а ми із 
-				задоволенням підхопили та зробили кращою 
-				для Silpo. Для всіх колег, які хочуть 
-				дізнаватися одне про одного щось, 
-				крім переліку робочих обов'язків.
-			</p>
-			<p>
-				Гра складається з різних раундів – текстових, 
-				інтерактивних та інших
-			</p>
-			<div className="content-item-bottom">
-				<span>11:00 | 27.05.20</span>
-				<span><img src={favoriteIcon} alt="favorite"/>8700</span>
-				<span><img src={chatBubbleIcon} alt="chat-bubble"/>9700</span>
-			</div>
-		</article>
+		data.map(({id, title, image, time}, idx) => {
+			return (
+				<article className="news" key={idx} onClick={() => onClicked(id)}>
+					<img className="news-image" src={image} alt="news"/>
+					<div className="news-info">
+						<h2>{title}</h2>
+						<div className="content-item-bottom">
+							<span>{time}</span>
+							<span><img src={favoriteIcon} alt="favorite"/>{likes}</span>
+							<span><img src={chatBubbleIcon} alt="chat-bubble"/>{comments}</span>
+						</div>
+					</div>
+				</article>
+			)
+		})
 	)
 }
 

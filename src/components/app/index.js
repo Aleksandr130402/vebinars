@@ -9,8 +9,10 @@ import News from '../pages/News';
 import Header from '../Header';
 import PopUp from '../PopUp';
 import Menu from '../Menu';
+import NewsItem from '../pages/NewsItem';
 
-import data from '../mocks/data';
+import news from '../mocks/news';
+import vebinars from '../mocks/vebinars';
 
 
 const App = () => {
@@ -19,7 +21,7 @@ const App = () => {
   const [notif, addNotif] = useState(false);
   const [menu, addMenu] = useState(false);
 
-  const selectItem = (id) => {
+  const selectItem = (id, data) => {
     const item = data.find((item) => item.id === id);
 
     console.log(item);
@@ -41,8 +43,8 @@ const App = () => {
             path="/"
             render={({history}) => {
                 return (
-                  <ContentItem data={data} onClicked={(id) => {
-                    selectItem(id);
+                  <ContentItem data={vebinars} onClicked={(id) => {
+                    selectItem(id, vebinars);
                     history.push(`/vebinars/${id}`);
                   }}/>
                 )
@@ -53,17 +55,33 @@ const App = () => {
             path="/vebinars/:id"
             render={() => {
                 return (
-                    <ContentItemDetails 
-                        selectedItem={selectedItem}
-                    />
+                  <ContentItemDetails 
+                    selectedItem={selectedItem}
+                  />
                 )
             }} 
           />
           <Route
             path="/news"
+            render={({history}) => {
+              return (
+                <News 
+                  data={news} onClicked={(id) => {
+                    selectItem(id, news);
+                    history.push(`/news/${id}`);
+                    }}
+                />
+              )
+            }}
+            exact
+          />
+          <Route
+            path="/news/:id"
             render={() => {
               return (
-                <News/>
+                <NewsItem
+                  selectedItem={selectedItem}
+                />
               )
             }}
           />
