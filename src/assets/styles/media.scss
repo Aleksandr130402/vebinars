@@ -30,10 +30,6 @@
 		.container {
 			margin-left: 304px;
 			padding: 0px 32px;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-gap: 13px;
-			height: fit-content;
 		}
 
 		.content-item {
@@ -48,6 +44,12 @@
 			height: auto;
 			top: 32px;
 			bottom: 36px;
+		}
+
+		.desktop-items {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 13px;
 		}
 	}
 }

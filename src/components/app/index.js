@@ -5,11 +5,11 @@ import { Route, Switch } from 'react-router';
 
 import ContentItem from '../ContentItem';
 import ContentItemDetails from '../pages/ContentItemDetails';
-import News from '../pages/News';
+import NewsItem from '../pages/NewsItem';
 import Header from '../Header';
 import PopUp from '../PopUp';
 import Menu from '../Menu';
-import NewsItem from '../pages/NewsItem';
+import NewsItemDetails from '../pages/NewsItemDetails';
 
 import news from '../mocks/news';
 import vebinars from '../mocks/vebinars';
@@ -43,10 +43,12 @@ const App = () => {
             path="/"
             render={({history}) => {
                 return (
+                  <div className="desktop-items">
                   <ContentItem data={vebinars} onClicked={(id) => {
                     selectItem(id, vebinars);
                     history.push(`/vebinars/${id}`);
                   }}/>
+                  </div>
                 )
             }}
             exact
@@ -65,12 +67,14 @@ const App = () => {
             path="/news"
             render={({history}) => {
               return (
-                <News 
+                <div className="desktop-items">
+                <NewsItem 
                   data={news} onClicked={(id) => {
                     selectItem(id, news);
                     history.push(`/news/${id}`);
                     }}
                 />
+                </div>
               )
             }}
             exact
@@ -79,7 +83,7 @@ const App = () => {
             path="/news/:id"
             render={() => {
               return (
-                <NewsItem
+                <NewsItemDetails
                   selectedItem={selectedItem}
                 />
               )
